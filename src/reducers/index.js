@@ -1,4 +1,6 @@
-import { ADD_ITEM, DELETE_ITEM, EDIT_ITEM } from '../actions/action-types';
+import {
+  ADD_ITEM, DELETE_ITEM, EDIT_ITEM, SET_ITEMS,
+} from '../actions/action-types';
 
 const initialState = {
   items: {},
@@ -27,6 +29,13 @@ const itemsReducer = (state = initialState, action) => {
     return {
       ...state,
       items: { ...state.items, [id]: { text, id } },
+    };
+  }
+  if (action.type === SET_ITEMS) {
+    const { items } = action;
+    return {
+      ...state,
+      items,
     };
   }
   return state;
