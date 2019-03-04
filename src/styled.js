@@ -78,12 +78,15 @@ export const StyledItem = styled.div`
 
 export const StyledText = styled.div`
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: flex-center;
   align-items: center;
   width: 100%;
+  max-width: 70vw;
+  word-wrap: break-word;
+  padding-left: 20px;
   ${({ isPurchased }) => isPurchased
-    && `color: red;
+    && `color: #E8708E;
   text-decoration: line-through;
   `};
 `;

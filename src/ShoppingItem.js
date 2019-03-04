@@ -31,9 +31,16 @@ class ShoppingItem extends Component {
   }
 
   setPurchaseState() {
-    this.setState({
-      isPurchased: true,
-    });
+    const { isPurchased } = this.state;
+    if (isPurchased === true) {
+      this.setState({
+        isPurchased: false,
+      });
+    } else {
+      this.setState({
+        isPurchased: true,
+      });
+    }
   }
 
   onEditSubmit = () => {
@@ -57,8 +64,7 @@ class ShoppingItem extends Component {
           <FontAwesomeIcon icon="check" />
         </StyledIcon>
         <StyledText isPurchased={isPurchased}>
-          {text}
-          {isEditing && (
+          {isEditing ? (
             <StyledWrapper>
               <StyledInput
                 defaultValue={text}
@@ -71,6 +77,8 @@ class ShoppingItem extends Component {
                 <FontAwesomeIcon icon="check" />
               </StyledIcon>
             </StyledWrapper>
+          ) : (
+            text
           )}
         </StyledText>
         <StyledIcon
