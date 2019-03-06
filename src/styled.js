@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 export const StyledContainer = styled.div`
   background-color: #4b969a;
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +41,7 @@ export const StyledInput = styled.input`
 `;
 
 export const StyledButton = styled.button`
-  margin: 0;
+  margin: 10px;
   padding: 10px;
   height: 60px;
   width: 130px;

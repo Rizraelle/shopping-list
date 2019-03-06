@@ -53,8 +53,8 @@ class App extends Component {
         <StyledHeader>Shopping List</StyledHeader>
         <ShoppingForm />
         <ShoppingList items={items} />
-        <StyledButton onClick={this.saveItems}>SAVE</StyledButton>
-        <StyledButton onClick={this.getItems}>GET ITEMS</StyledButton>
+        <StyledButton onClick={this.saveItems}>Save</StyledButton>
+        <StyledButton onClick={this.getItems}>Get Items</StyledButton>
       </StyledContainer>
     );
   }
